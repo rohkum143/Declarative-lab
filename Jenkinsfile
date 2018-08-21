@@ -11,7 +11,7 @@ pipeline {
 	    always {
 	       echo 'this will always run '
 	    }
-	    sucess {
+	    success {
 	       echo 'this will run on sucessfull '
 	       }
 	     failure {
