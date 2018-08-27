@@ -1,26 +1,17 @@
 pipeline {
-	 agent { docker{ image 'maven:3.3.3'}}
-	 environment { 
-		DISABLE_AUTH = 'true'
-                DB_ENGINE    = 'sqlite'
-         } 
-	 stages{
-	   stage('build'){
-	       steps{
-	        sh 'mvn --version'
-		sh 'printenv'
-	       }
-	    } 	   
-	 }
-	 post {
-	    always {
-	       echo 'this will always run '
-	    }
-	    success {
-	       echo 'this will run on sucessfull '
-	       }
-	     failure {
-	        echo 'this will run on failure'
-	     }
-	 }
-} 
+     agent none
+      stages {
+        stage ('build') {
+        agent {docker 'maven:3-alpine'}
+         steps { 
+           sh 'mvn --version'
+           }
+        }
+        stage ('Example Test') {
+        agent { dokcer 'openjdk:8-jre'}
+         steps {
+           sh 'java -version'
+         }
+       }
+      }
+    }
