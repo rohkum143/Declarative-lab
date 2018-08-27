@@ -7,7 +7,7 @@ pipeline {
            sh 'mvn --version'
            }
         }
-        stage ('Example Test') {
+        stage ('Example Test')  {
         agent { dokcer 'openjdk:8-jre'}
          steps {
            sh 'java -version'
