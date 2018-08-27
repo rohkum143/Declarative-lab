@@ -5,10 +5,10 @@ pipeline {
                 DB_ENGINE    = 'sqlite'
          } 
 	 stages{
-           environment { 
-                AN_ACCESS_KEY = credentials('my-prefined-secret-text') 
+           stage('build'){
+	       environment { 
+                AN_ACCESS_KEY = credentials('rohtash-id') 
             }
-	   stage('build'){
 	       steps{
 	        sh 'mvn --version'
 		sh 'printenv'
