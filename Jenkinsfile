@@ -5,6 +5,9 @@ pipeline {
                 DB_ENGINE    = 'sqlite'
          } 
 	 stages{
+           environment {
+		  docker-pass = credentials('rohtash_ID')
+	       }
 	   stage('build'){
 	       steps{
 	        sh 'mvn --version'
