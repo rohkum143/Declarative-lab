@@ -12,6 +12,7 @@ pipeline {
 	       steps{
 	        sh 'mvn --version'
 		sh 'printenv'
+		checkout scm
 	       }
 	    } 	   
 	 }
