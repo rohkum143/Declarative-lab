@@ -8,7 +8,7 @@ pipeline {
            }
         }
         stage ('Example Test')  {
-        agent {dokcer 'openjdk:8-jre'}
+        agent {docker 'openjdk:8-jre'}
          steps {
            sh 'java -version'
          }
