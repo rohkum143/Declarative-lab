@@ -6,6 +6,7 @@ pipeline {
         agent {docker 'maven:3-alpine'}
          steps { 
            sh 'mvn --version'
+           runtest()
            }
         }
         stage ('Example Test')  {
