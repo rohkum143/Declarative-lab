@@ -5,9 +5,7 @@ pipeline {
                 DB_ENGINE    = 'sqlite'
          } 
 	 stages{
-           stage('build'){
-	       environment { 
-            }
+           stage('build')
 	       steps{
 	        sh 'mvn --version'
 		sh 'printenv'
