@@ -4,15 +4,14 @@ pipeline {
 		DISABLE_AUTH = 'true'
                 DB_ENGINE    = 'sqlite'
          } 
-	 stages{
+	 stages {
            stage('build')
-	       steps{
+	       steps {
 	        sh 'mvn --version'
 		sh 'printenv'
 		checkout scm
 	       }
 	    } 	   
-	 }
 	 post {
 	    always {
 	       echo 'this will always run '
