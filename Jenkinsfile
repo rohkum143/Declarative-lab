@@ -1,3 +1,4 @@
+@Library('sharedlib') _
 pipeline {
      agent none
       stages {
