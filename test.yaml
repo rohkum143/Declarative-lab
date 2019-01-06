@@ -6,10 +6,10 @@ services:
       dockerfile: Dockerfile-alternate
       args:
         buildno: 1
- docker:
-    -Ddocker.projectKey: "api1"
-    -Ddocker.projectName: "api2"
-    -Dappname: "api3"
-    -Ddocker.sources: "api4"
+docker:
+      docker.projectKey: "api1"
+      docker.projectName: "api2"
+      appname: "api3"
+      docker.sources: "api4"
    
    
