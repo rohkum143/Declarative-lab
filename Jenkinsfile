@@ -4,7 +4,7 @@ pipeline {
         stage ('build') {
         agent any
          steps { 
-           sh 'hostname -i'
+           sh 'hostname'
               
               
            }
@@ -12,7 +12,7 @@ pipeline {
         stage ('Example Test')  {
         agent any
          steps {
-           sh 'java -version'
+           sh 'hostname'
          }
        }
       }
